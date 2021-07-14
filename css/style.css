@@ -529,28 +529,52 @@ h2 .h2-last {
     font-size: 18px;
   }
 
-  .header-content a .text {
-    display: none;
+  /* .header-content a .text {
+  display: none;
+}
+
+.header-content .a-tel {
+  margin-right: 0px;
+  width: 60px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-content .a-doc {
+  width: 60px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-content .m-icon {
+  margin-right: 0px;
+} */
+  .header-item {
+    position: absolute;
+  }
+
+  .header-item.tel {
+    position: absolute;
+    right: 38px;
+    top: 40px
+  }
+
+  .header-item.doc {
+    position: absolute;
+    right: 16px;
+    top: 0px
   }
 
   .header-content .a-tel {
     margin-right: 0px;
-    width: 60px;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 40px
   }
 
   .header-content .a-doc {
-    width: 60px;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .header-content .m-icon {
-    margin-right: 0px;
+    height: 40px
   }
 }

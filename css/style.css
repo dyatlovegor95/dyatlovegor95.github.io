@@ -341,6 +341,11 @@ h1 .h1-last {
   bottom: 80px;
 }
 
+::placeholder {
+  color: #DADADA;
+  font-size: 14px;
+}
+
 .form-input {
   display: block;
   width: 100%;
@@ -352,7 +357,7 @@ h1 .h1-last {
   margin-bottom: 5px;
   padding-left: 16px;
   padding-right: 16px;
-
+  font-size: 14px;
 }
 
 .form-button {

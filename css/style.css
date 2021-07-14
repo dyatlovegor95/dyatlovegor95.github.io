@@ -341,7 +341,7 @@ h1 .h1-last {
   bottom: 80px;
 }
 
-::placeholder {
+.form-input::placeholder {
   color: #DADADA;
   font-size: 14px;
 }

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+  <meta charset="utf-8">
+
+
+  <title>TovaTova</title>
+  <meta name="description" content="Источник новых заказов для торговли и доставки">
+
+
+  <meta property="og:title" content="TovaTova">
+  <meta property="og:description" content="Источник новых заказов для торговли и доставки">
+  <meta property="og:type" content="website">
+  <meta property='og:image' content="">
+  <meta property="og:url" content="">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:locale:alternate" content="en_US">
+
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+
+
+
+  <link rel="icon" href="imgs/logo_tovatova_white.svg">
+
+
+  <meta name="theme-color" content="#24242E">
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="app">
+
+  <div class="preloader">
+    <div class="pulse"></div>
+  </div>
+
+  <header class="header">
+
+    <div class="header-content container">
+      <div class="header-item logo">
+        <img src="imgs/logo_tovatova_white.svg" alt="TovaTova">
+      </div>
+      <div class="header-item tel">
+        <a class="a-tel" href="tel:+78005553456"><i class="material-icons m-icon">call</i><span class="text">888 555 34
+            56</span></a>
+      </div>
+      <div class="header-item doc">
+        <a href="doc/dogovor_tovatova.pdf" target="blank" class="a-doc" title="Скачать"><i
+            class="material-icons m-icon">save_alt</i><span class="text">Скачать
+            договор</span></a>
+      </div>
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <section class="section section-form">
+
+      <div class="form-background-wrapper">
+        <img class="form-background" src="imgs/header.jpg" alt="TovaTova">
+      </div>
+
+
+      <div class="section-form-wrapper container">
+        <h1 class="h1">
+          <div class="h1-first">Источник новых заказов</div>
+          <div class="h1-last">для торговли и доставки</div>
+        </h1>
+      </div>
+
+      <form class="form" onsubmit="return false">
+        <input class="form-input i1" placeholder="Название ресторана" type="text">
+        <input class="form-input i2" placeholder="Ваш Имя" type="text">
+        <input class="form-input i3" placeholder="Ваш номер телефона" type="text">
+        <button class="form-button">Стать партнером</button>
+      </form>
+
+
+    </section>
+
+    <section class="section section-advantages container">
+      <h2 class="h2">
+        <div class="h2-first">Преимущества</div>
+        <div class="h2-last">для увеличения оборотов</div>
+      </h2>
+
+      <div class="advantages">
+        <div class="advantages-left">
+          <div class="advantages-item">
+            <div class="title">Продвижение ресторана</div>
+            <div class="desc">Мы размещаем рекламу вашего ресторана на внешних источниках</div>
+          </div>
+
+          <div class="advantages-item">
+            <div class="title">Новый канал продаж</div>
+            <div class="desc">Реализуем множество ит-сервисов для размещения меню и сбора заказов, вы платите только за
+              реальные заказы</div>
+          </div>
+
+          <div class="advantages-item">
+            <div class="title">Простой прием заказов</div>
+            <div class="desc">Вы можете принимать заказы на электронную почту или с использованием нашего сервиса если
+              требуется ускоренная обработка заказов</div>
+          </div>
+        </div>
+
+
+
+        <div class="advantages-right">
+          <div class="advantages-item">
+            <div class="title">Доставим вовремя</div>
+            <div class="desc">С помощью нашей курьерской службы</div>
+          </div>
+
+          <div class="advantages-item">
+            <div class="title">Количество продаж</div>
+            <div class="desc">Прирост заказов за счет размещаемой рекламы может составлять более 100% от текущего
+              оборота</div>
+          </div>
+
+          <div class="advantages-item">
+            <div class="title">Не размещаем меню ваших конкурентов на одном сервисе</div>
+            <div class="desc">При продвижении вашего ресторана мы не размещаем меню конкурентных ресторанов рядом с
+              вашим</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section section-conditions container">
+      <h2 class="h2">
+        <div class="h2-first">Условия сотрудничества</div>
+        <div class="h2-last">по договору оферты</div>
+      </h2>
+
+      <div class="conditions">
+        Наша комиссия 20% от суммы заказов если заказы доставляют курьеры ресторана и 35% при доставке курьерами
+        TovaTova
+      </div>
+    </section>
+
+
+
+  </main>
+
+
+  <!-- <script src="js/common.js"></script> -->
+
+  <script>
+    ((global) => {
+      setTimeout(() => { document.querySelector('.preloader').classList.add('none') }, 1000)
+
+
+      /* const option = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'multipart/form-data',
+          'Access-Control-Allow-Origin': 'no-cors',
+        },
+      }
+ */
+      let btn = document.querySelector('.form-button')
+      btn.addEventListener('click', sendForm)
+
+
+
+      async function sendForm() {
+        let namer = document.querySelector('.i1').value
+        let name = document.querySelector('.i2').value
+        let tel = document.querySelector('.i3').value
+        console.log(namer)
+
+        /* fetch(`https://tovatova.com/i.php?api=partner_land`, option)
+          .then((res) => res.json())
+          .then((data) => {
+            console.log('Success')
+          })
+          .catch((error) => {
+            console.log('Error')
+          }) */
+
+
+        let user = {
+          namer: namer,
+          name: name,
+          tel: tel
+        };
+
+        let response = await fetch('https://tovatova.com/i.php?api=partner_land', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json;charset=utf-8'
+          },
+          body: JSON.stringify(user)
+        });
+
+        let result = await response.json();
+        alert(result);
+      }
+
+
+    })(window)
+  </script>
+
+</body>
+
+</html>

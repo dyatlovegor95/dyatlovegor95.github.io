@@ -39,6 +39,13 @@
     <div class="pulse"></div>
   </div>
 
+  <div class="popup">
+    <div class="popup-content">
+      <div class="popup-text">Ваша заявка получена, мы свяжемся с Вами в ближайшее время.</div>
+      <div class="popup-button">ок</div>
+    </div>
+  </div>
+
   <header class="header">
 
     <div class="header-content container">
@@ -169,40 +176,56 @@
       let btn = document.querySelector('.form-button')
       btn.addEventListener('click', sendForm)
 
+      let popup = document.querySelector('.popup')
+      popup.addEventListener('click', closePopup)
+
+      function closePopup() {
+        popup.classList.remove('display')
+      }
 
 
       async function sendForm() {
-        let namer = document.querySelector('.i1').value
-        let name = document.querySelector('.i2').value
-        let tel = document.querySelector('.i3').value
-        console.log(namer)
 
-        /* fetch(`https://tovatova.com/i.php?api=partner_land`, option)
-          .then((res) => res.json())
-          .then((data) => {
-            console.log('Success')
-          })
-          .catch((error) => {
-            console.log('Error')
-          }) */
+        try {
+          let namer = document.querySelector('.i1').value
+          let name = document.querySelector('.i2').value
+          let tel = document.querySelector('.i3').value
+
+          if (!(namer && name && tel)) {
+            alert('Заполните все поля')
+            return
+          }
+
+          document.querySelector('.i1').value = ''
+          document.querySelector('.i2').value = ''
+          document.querySelector('.i3').value = ''
 
 
-        let user = {
-          namer: namer,
-          name: name,
-          tel: tel
-        };
+          console.log(namer)
 
-        let response = await fetch('https://tovatova.com/i.php?api=partner_land', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json;charset=utf-8'
-          },
-          body: JSON.stringify(user)
-        });
 
-        //let result = await response.json();
-        //alert(result);
+          popup.classList.add('display')
+
+          let user = {
+            namer: namer,
+            name: name,
+            tel: tel
+          };
+
+          let response = await fetch('https://tovatova.com/i.php?api=partner_land', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify(user)
+          });
+
+
+        }
+
+        catch (e) {
+
+        }
       }
 
 

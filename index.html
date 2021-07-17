@@ -35,10 +35,10 @@
 
 <body class="app">
 
-  <div class="preloader">
+  <!-- <div class="preloader">
     <div class="pulse"></div>
   </div>
-
+ -->
   <div class="popup">
     <div class="popup-content">
       <div class="popup-text">Ваша заявка получена, мы свяжемся с Вами в ближайшее время.</div>
@@ -80,14 +80,16 @@
           <div class="h1-first">Источник новых заказов</div>
           <div class="h1-last">для торговли и доставки</div>
         </h1>
+
+        <form class="form" onsubmit="return false">
+          <input class="form-input i1" placeholder="Название ресторана" type="text">
+          <input class="form-input i2" placeholder="Ваше Имя" type="text">
+          <input class="form-input i3" placeholder="Ваш номер телефона" type="text">
+          <button class="form-button">Стать партнером</button>
+        </form>
       </div>
 
-      <form class="form" onsubmit="return false">
-        <input class="form-input i1" placeholder="Название ресторана" type="text">
-        <input class="form-input i2" placeholder="Ваш Имя" type="text">
-        <input class="form-input i3" placeholder="Ваш номер телефона" type="text">
-        <button class="form-button">Стать партнером</button>
-      </form>
+      
 
 
     </section>
@@ -161,7 +163,7 @@
 
   <script>
     ((global) => {
-      setTimeout(() => { document.querySelector('.preloader').classList.add('none') }, 1000)
+      /* setTimeout(() => { document.querySelector('.preloader').classList.add('none') }, 1000) */
 
 
       let btn = document.querySelector('.form-button')

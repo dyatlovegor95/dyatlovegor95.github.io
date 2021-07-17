@@ -596,3 +596,13 @@ h2 .h2-last {
     font-size: 16px;
   }
 }
+
+@media(max-height: 512px) {
+  .h1 {
+    margin-top: 60px;
+    /* padding-bottom: 160px */
+  }
+  .section-form-wrapper {
+    height: 620px;
+  }
+}
